@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:project_1/screen/register.dart';
+import 'screen/login.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -15,10 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const LoginPage(),
+      home: LoginPage(),
       routes: {
-        '/login': (ctx)=>const LoginPage(),
-        // '/state_provider': (ctx)=>const StateProviderPage(),
+        '/login': (ctx) => LoginPage(),
+        '/register': (ctx)=> RegisterPage(),
         // '/future_provider': (ctx)=>const FutureProviderPage(),
         // '/stream_provider': (ctx)=>const StreamProviderPage(),
         // '/state_notifier': (ctx)=> const StateNotifierPage(),
@@ -30,5 +32,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
