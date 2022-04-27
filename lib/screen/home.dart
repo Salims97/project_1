@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../widgets/categorie_icon.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class Home extends ConsumerWidget {
   String dropdownValue = 'Popular';
@@ -11,7 +12,7 @@ class Home extends ConsumerWidget {
 
   Home({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -149,13 +150,13 @@ class Home extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      height: 120,
-                      width: 120,
+                        height: 120,
+                        width: 120,
                         child: Image.asset(
-                      "assets/images/profile.jpg",
-                      alignment: Alignment.centerLeft,
-                      fit: BoxFit.cover,
-                    )),
+                          "assets/images/profile.jpg",
+                          alignment: Alignment.centerLeft,
+                          fit: BoxFit.cover,
+                        )),
                     Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Column(
@@ -179,7 +180,15 @@ class Home extends ConsumerWidget {
                               Icon(Icons.abc),
                               Text(" 1000.000.000 U.S "),
                             ],
-                          )
+                          ),
+                          LinearPercentIndicator(
+                            width: 140.0,
+                            lineHeight: 4.0,
+                            percent: 0.5,
+                            backgroundColor: Colors.grey,
+                            progressColor: Colors.blue,
+                            trailing: Text("50%"),
+                          ),
                         ],
                       ),
                     )
@@ -193,4 +202,3 @@ class Home extends ConsumerWidget {
     );
   }
 }
-
