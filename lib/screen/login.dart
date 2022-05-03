@@ -152,7 +152,7 @@ class LoginPage extends ConsumerWidget {
                                   if (await LoginApi.loginAuth(
                                       name.text, password.text)) {
                                     Navigator.of(context)
-                                        .pushReplacementNamed('/home');
+                                        .pushReplacementNamed('/bottom_bar');
                                   }
                                 }
                               },
