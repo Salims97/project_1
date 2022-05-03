@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (ctx) => LoginPage(),
         '/register': (ctx)=> RegisterPage(),
-        // '/future_provider': (ctx)=>const FutureProviderPage(),
+         '/home': (ctx)=> Container(),
         // '/stream_provider': (ctx)=>const StreamProviderPage(),
         // '/state_notifier': (ctx)=> const StateNotifierPage(),
         // '/change_notifier': (ctx)=>const ChangeNotifierPage(),

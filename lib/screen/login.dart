@@ -151,8 +151,8 @@ class LoginPage extends ConsumerWidget {
                                 if (formKey.currentState!.validate()) {
                                   if (await LoginApi.loginAuth(
                                       name.text, password.text)) {
-                                    // Navigator.of(context)
-                                    //     .pushReplacementNamed('/register');
+                                    Navigator.of(context)
+                                        .pushReplacementNamed('/home');
                                   }
                                 }
                               },
