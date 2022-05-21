@@ -14,11 +14,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-<<<<<<< HEAD
   Color theme = AppColors.darkBackground;
-=======
-  Color theme = const Color.fromARGB(255, 11, 50, 82);
->>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
   int _selectedIndex = 0;
   void _changeItem(int index) {
     setState(() {
@@ -65,13 +61,8 @@ class _BottomBarState extends State<BottomBar> {
         rippleColor:const  Color.fromARGB(
             255, 43, 43, 43), // tab button ripple color when pressed
         //hoverColor: Colors.blue, // tab button hover color
-<<<<<<< HEAD
         padding: EdgeInsets.symmetric(
             horizontal: 20, vertical: 10), // navigation bar padding
-=======
-        padding: const EdgeInsets.symmetric(
-            horizontal: 20, vertical: 5), // navigation bar padding
->>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
 
         tabs:const [
           GButton(

@@ -16,15 +16,9 @@ class RowOfDetails extends StatelessWidget {
         children: [
           Row(
             children: [
-<<<<<<< HEAD
               Padding(
                 padding: const EdgeInsets.only(right: 4),
                 child: Icon(Icons.category_outlined),
-=======
-              const Padding(
-                padding:  EdgeInsets.only(right: 4),
-                child: Icon(Icons.mark_email_read_outlined),
->>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
               ),
               Column(
                 children: [
@@ -82,13 +76,8 @@ class RowOfDetails extends StatelessWidget {
               ),
               Column(
                 children: [
-<<<<<<< HEAD
                   Text(
                     "Volunteer",
-=======
-                  const Text(
-                    "Donation",
->>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(
