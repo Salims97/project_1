@@ -2,19 +2,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:project_1/models/app_colors.dart';
 
 import '../widgets/categorie_icon.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class Home extends ConsumerWidget {
   String dropdownValue = 'Popular';
-  Color theme = Color.fromARGB(255, 11, 50, 82);
+  Color theme = AppColors.darkBlue7;
 
   Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.darkBackground,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +75,7 @@ class Home extends ConsumerWidget {
                         suffixIcon: IconButton(
                           onPressed: () => null,
                           icon: Icon(Icons.search),
-                          color: Colors.lightGreen,
+                          color: AppColors.darkBlue4,
                         ),
                         fillColor: Color.fromARGB(255, 196, 203, 214),
                         filled: true),
@@ -96,14 +98,14 @@ class Home extends ConsumerWidget {
                   children: [
                     CategorieIcon(
                       name: "Health",
-                      image: "assets/images/profile.jpg", /*On tap*/
+                      image: "assets/images/healthcare.png", /*On tap*/
                     ),
                     CategorieIcon(
-                        name: "Food", image: "assets/images/profile.jpg"),
+                        name: "Food", image: "assets/images/dish.png"),
                     CategorieIcon(
-                        name: "Money", image: "assets/images/profile.jpg"),
+                        name: "Money", image: "assets/images/binance.png"),
                     CategorieIcon(
-                        name: "more", image: "assets/images/profile.jpg"),
+                        name: "more", image: "assets/images/more.png"),
                   ],
                 )
               ]),
@@ -114,17 +116,17 @@ class Home extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Trending Donation',
+                    'Trending Volunteer',
                     style: TextStyle(fontSize: 20, color: theme),
                   ),
                   DropdownButton<String>(
                     value: dropdownValue,
                     icon: const Icon(Icons.arrow_downward),
                     elevation: 16,
-                    style: const TextStyle(color: Colors.deepPurple),
+                    style: const TextStyle(color: AppColors.darkBlue4),
                     underline: Container(
                       height: 2,
-                      color: Colors.deepPurpleAccent,
+                      color: AppColors.darkBlue5,
                     ),
                     onChanged: (String? newValue) {
                       // setState(() {
@@ -153,7 +155,7 @@ class Home extends ConsumerWidget {
                         height: 120,
                         width: 120,
                         child: Image.asset(
-                          "assets/images/profile.jpg",
+                          "assets/images/firstvolunteer.jpg",
                           alignment: Alignment.centerLeft,
                           fit: BoxFit.cover,
                         )),

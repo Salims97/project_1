@@ -24,7 +24,7 @@ class CategorieIcon extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: Color.fromARGB(175, 196, 203, 214),
                 borderRadius: BorderRadius.all(Radius.circular(15))),
-            child: Center(child: Image.asset(image)),
+            child: Center(child: Image.asset(image,width: MediaQuery.of(context).size.width*.17 ,height: MediaQuery.of(context).size.height*.17,)),
           ),
         ),
         Padding(

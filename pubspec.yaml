@@ -40,6 +40,7 @@ dependencies:
   google_nav_bar: ^5.0.6
   readmore: ^2.1.0
   percent_indicator: ^4.0.0
+  flutter_rating_bar: ^4.0.1
   #google_mobile_ads: ^1.2.0
 
 dev_dependencies:
@@ -67,6 +68,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/profile.jpg
+   - assets/images/healthcare.png
+   - assets/images/dish.png
+   - assets/images/binance.png
+   - assets/images/more.png
+   - assets/images/firstvolunteer.jpg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
