@@ -16,13 +16,19 @@ class RowOfDetails extends StatelessWidget {
         children: [
           Row(
             children: [
+<<<<<<< HEAD
               Padding(
                 padding: const EdgeInsets.only(right: 4),
                 child: Icon(Icons.category_outlined),
+=======
+              const Padding(
+                padding:  EdgeInsets.only(right: 4),
+                child: Icon(Icons.mark_email_read_outlined),
+>>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
               ),
               Column(
                 children: [
-                  Text(
+                  const Text(
                     "Categories",
                     style: TextStyle(color: Colors.grey),
                   ),
@@ -34,7 +40,7 @@ class RowOfDetails extends StatelessWidget {
               )
             ],
           ),
-          VerticalDivider(
+          const VerticalDivider(
             width: 10,
             thickness: 1,
             indent: 5,
@@ -43,13 +49,13 @@ class RowOfDetails extends StatelessWidget {
           ),
           Row(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(right: 4),
                 child: Icon(Icons.calendar_month_outlined),
               ),
               Column(
                 children: [
-                  Text(
+                  const Text(
                     "Days left",
                     style: TextStyle(color: Colors.grey),
                   ),
@@ -61,7 +67,7 @@ class RowOfDetails extends StatelessWidget {
               )
             ],
           ),
-          VerticalDivider(
+          const VerticalDivider(
             width: 10,
             thickness: 1,
             indent: 5,
@@ -70,14 +76,19 @@ class RowOfDetails extends StatelessWidget {
           ),
           Row(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(right: 4),
                 child: Icon(Icons.volunteer_activism_outlined),
               ),
               Column(
                 children: [
+<<<<<<< HEAD
                   Text(
                     "Volunteer",
+=======
+                  const Text(
+                    "Donation",
+>>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(

@@ -248,7 +248,7 @@ class RegisterPage extends ConsumerWidget {
                                         controller: confirmPassword,
                                         obscureText: !visible1,
                                         validator: (value) {
-                                          if (value == null || value.isEmpty) {
+                                          if (value == null || value.isEmpty || password.text != confirmPassword.text) {
                                             return "please enter right Password";
                                           }
                                           return null;
@@ -297,7 +297,7 @@ class RegisterPage extends ConsumerWidget {
                                 onPressed: ()async {
                                   if (formKey.currentState!.validate()) {
                                     if(await RegisterApi.registerAuth(userName.text, gmail.text, password.text, phoneNumber.text)){
-                                      // Navigator.of(context).pushReplacementNamed('');
+                                       Navigator.of(context).pushReplacementNamed('/home');
                                     }
                                   }
                                 },

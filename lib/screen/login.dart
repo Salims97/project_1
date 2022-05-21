@@ -148,14 +148,13 @@ class LoginPage extends ConsumerWidget {
                             ),
                             child: IconButton(
                               onPressed: () async {
-                                Navigator.of(context).pushReplacementNamed('/bottom_bar');
-                                //if (formKey.currentState!.validate()) {
-                                  //if (await LoginApi.loginAuth(
-                                  //    name.text, password.text)) {
-                                    // Navigator.of(context)
-                                    //     .pushReplacementNamed('/register');
-                                  //}
-                                //}
+                                if (formKey.currentState!.validate()) {
+                                  if (await LoginApi.loginAuth(
+                                      name.text, password.text)) {
+                                    Navigator.of(context)
+                                        .pushReplacementNamed('/bottom_bar');
+                                  }
+                                }
                               },
                               icon: const Icon(
                                 Icons.arrow_right_alt,

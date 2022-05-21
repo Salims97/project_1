@@ -1,7 +1,10 @@
 // ignore: file_names
 class ServiceConfig{
    //local:
-  static const domainNameServer = 'http://127.0.0.1:8000';
+  //static const domainNameServer = 'http://127.0.0.1:8000';
+
+  //mobile salim
+   static const domainNameServer = 'http://192.168.43.248:8000';
 
 //mobile sami:
  //static const domainNameServer = 'http://192.168.43.248:8000';
@@ -15,9 +18,9 @@ class ServiceConfig{
   //server up
  // static const domainNameServer= 'https://burdy-api.000webhostapp.com';
 
-  static const register = '/api/user/register';
+  static const register = '/api/auth/register';
 
-  static const signin = '/api/user/login';
+  static const login = '/api/auth/login';
 
   static const newproduct = '/api/products/';
 

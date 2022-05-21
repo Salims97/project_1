@@ -28,10 +28,17 @@ class MyApp extends StatelessWidget {
       home: LoginPage(),
       routes: {
         '/login': (ctx) => LoginPage(),
+<<<<<<< HEAD
         '/register': (ctx) => RegisterPage(),
         '/home': (context) => Home(),
         '/bottom_bar': (context) => BottomBar(),
         '/details': (context) => Details(),
+=======
+        '/register': (ctx)=> RegisterPage(),
+        '/home' : (context) => Home(),
+        '/bottom_bar' :(context) =>const BottomBar(),
+        '/details' :(context) => Details(),
+>>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
         // '/future_provider': (ctx)=>const FutureProviderPage(),
         // '/stream_provider': (ctx)=>const StreamProviderPage(),
         // '/state_notifier': (ctx)=> const StateNotifierPage(),

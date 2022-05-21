@@ -9,7 +9,11 @@ import 'package:percent_indicator/percent_indicator.dart';
 
 class Home extends ConsumerWidget {
   String dropdownValue = 'Popular';
+<<<<<<< HEAD
   Color theme = AppColors.darkBlue7;
+=======
+  Color theme =const Color.fromARGB(255, 11, 50, 82);
+>>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
 
   Home({Key? key}) : super(key: key);
   @override
@@ -22,7 +26,7 @@ class Home extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               width: double.infinity,
               color: theme,
               child: Column(children: [

@@ -14,7 +14,11 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
+<<<<<<< HEAD
   Color theme = AppColors.darkBackground;
+=======
+  Color theme = const Color.fromARGB(255, 11, 50, 82);
+>>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
   int _selectedIndex = 0;
   void _changeItem(int index) {
     setState(() {
@@ -25,7 +29,7 @@ class _BottomBarState extends State<BottomBar> {
   /////
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static List<Widget> _bottomBarOptions = <Widget>[
+  static List<Widget> _bottomBarOptions = <Widget> [
     //2sma2 al saf7at yli r7 ynt2l 3leha
     Home(), //Home
     Campaign(),
@@ -51,20 +55,25 @@ class _BottomBarState extends State<BottomBar> {
         //   BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)
         // ], // tab button shadow
         curve: Curves.easeOutExpo, // tab animation curves
-        duration: Duration(milliseconds: 900), // tab animation duration
+        duration:const Duration(milliseconds: 900), // tab animation duration
         gap: 8, // the tab button gap between icon and text
         color: Colors.white, // unselected icon color
         activeColor: Color.fromARGB(255, 124, 205, 127), // selected icon and text color
         // tabBackgroundColor:
         //     Colors.purple.withOpacity(0.1), // selected tab background color
 
-        rippleColor: Color.fromARGB(
+        rippleColor:const  Color.fromARGB(
             255, 43, 43, 43), // tab button ripple color when pressed
         //hoverColor: Colors.blue, // tab button hover color
+<<<<<<< HEAD
         padding: EdgeInsets.symmetric(
             horizontal: 20, vertical: 10), // navigation bar padding
+=======
+        padding: const EdgeInsets.symmetric(
+            horizontal: 20, vertical: 5), // navigation bar padding
+>>>>>>> c940bb03426c73422ac0ccf982694fda7fb1da23
 
-        tabs: [
+        tabs:const [
           GButton(
             icon: Icons.home,
             text: 'Home',
