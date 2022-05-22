@@ -14,7 +14,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  Color theme = AppColors.darkBackground;
+  Color theme =Color.fromRGBO(30,30,36, 1);
   int _selectedIndex = 0;
   void _changeItem(int index) {
     setState(() {
@@ -54,7 +54,7 @@ class _BottomBarState extends State<BottomBar> {
         duration:const Duration(milliseconds: 900), // tab animation duration
         gap: 8, // the tab button gap between icon and text
         color: Colors.white, // unselected icon color
-        activeColor: Color.fromARGB(255, 124, 205, 127), // selected icon and text color
+        activeColor: Color.fromARGB(255, 219, 85, 107), // selected icon and text color
         // tabBackgroundColor:
         //     Colors.purple.withOpacity(0.1), // selected tab background color
 

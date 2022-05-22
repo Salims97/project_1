@@ -9,14 +9,14 @@ import 'package:percent_indicator/percent_indicator.dart';
 
 class Home extends ConsumerWidget {
   String dropdownValue = 'Popular';
-  Color theme =const Color.fromARGB(255, 11, 50, 82);
+  Color theme = Color.fromRGBO(30,30,36, 1);
 
   Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.darkBackground,
+        backgroundColor: Color.fromRGBO(234 , 224 , 213, 1),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
