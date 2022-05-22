@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:project_1/controls/login-api.dart';
+import 'package:project_1/models/color.dart';
 import 'package:project_1/widgets/curved-left-shadow.dart';
 import 'package:project_1/widgets/curved-left.dart';
 import 'package:project_1/widgets/curved-right-shadow.dart';
@@ -26,6 +27,7 @@ class RegisterPage extends ConsumerWidget {
     var visible = ref.watch(passwordState);
     var visible1 = ref.watch(passwordState1);
     return Scaffold(
+      backgroundColor: AppColors.darkBackground,
       body: SingleChildScrollView(
         child: Form(
           key: formKey,
@@ -45,6 +47,7 @@ class RegisterPage extends ConsumerWidget {
                     height: MediaQuery.of(context).size.height * 0.07,
                     width: MediaQuery.of(context).size.width * 0.3,
                     child: Card(
+                      color: AppColors.darkBlue9,
                       elevation: 16,
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
@@ -58,8 +61,8 @@ class RegisterPage extends ConsumerWidget {
                         },
                         child: const Text(
                           'Login',
-                          style:
-                              TextStyle(fontSize: 18, color: Colors.deepOrange),
+                          style: TextStyle(
+                              fontSize: 18, color: AppColors.darkBlue3),
                         ),
                       ),
                     ),
@@ -74,7 +77,7 @@ class RegisterPage extends ConsumerWidget {
                       child: Text(
                         'Register',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 39, 31, 106),
+                          color: AppColors.darkBlue9,
                           fontFamily: 'Adobe',
                           fontSize: 35,
                         ),
@@ -88,13 +91,14 @@ class RegisterPage extends ConsumerWidget {
                       child: Stack(
                         children: [
                           SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.42,
+                            height: MediaQuery.of(context).size.height * 0.36,
                             width: double.infinity,
                             child: Padding(
                               padding: EdgeInsets.only(
                                   right:
                                       MediaQuery.of(context).size.width * 0.11),
                               child: Card(
+                                color: AppColors.darkBlue9,
                                 elevation: 16,
                                 shape: const RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
@@ -166,24 +170,26 @@ class RegisterPage extends ConsumerWidget {
                                             color: Color.fromARGB(
                                                 255, 39, 31, 106),
                                           ),
-                                          suffixIcon: IconButton(
-                                              padding: const EdgeInsets.only(
+                                          suffixIcon: Padding(
+                                                 padding: const EdgeInsets.only(
                                                   right: 40),
-                                              onPressed: () {
-                                                var visible = ref.watch(
-                                                    passwordState.notifier);
-                                                visible.state = !visible.state;
-                                                print(visible.state);
-                                              },
-                                              icon: Icon(
-                                                visible
-                                                    ? Icons.visibility
-                                                    : Icons.visibility_off,
-                                                color: visible
-                                                    ? const Color.fromARGB(
-                                                        255, 39, 31, 106)
-                                                    : Colors.grey,
-                                              )),
+                                            child: IconButton(
+                                         
+                                                onPressed: () {
+                                                  var visible = ref.watch(
+                                                      passwordState.notifier);
+                                                  visible.state = !visible.state;
+                                                  print(visible.state);
+                                                },
+                                                icon: Icon(
+                                                  visible
+                                                      ? Icons.visibility
+                                                      : Icons.visibility_off,
+                                                  color: visible
+                                                      ? AppColors.darkBlue2
+                                                      : AppColors.darkBlue2,
+                                                )),
+                                          ),
                                         ),
                                         controller: password,
                                         obscureText: !visible,
@@ -225,59 +231,39 @@ class RegisterPage extends ConsumerWidget {
                                             color: Color.fromARGB(
                                                 255, 39, 31, 106),
                                           ),
-                                          suffixIcon: IconButton(
-                                            padding: const EdgeInsets.only(
+                                          suffixIcon: Padding(
+                                         padding: const EdgeInsets.only(
                                                 right: 40),
-                                            onPressed: () {
-                                              var visible1 = ref.watch(
-                                                  passwordState1.notifier);
-                                              visible1.state = !visible1.state;
-                                              print(visible1.state);
-                                            },
-                                            icon: Icon(
-                                              visible1
-                                                  ? Icons.visibility
-                                                  : Icons.visibility_off,
-                                              color: visible1
-                                                  ? const Color.fromARGB(
-                                                      255, 39, 31, 106)
-                                                  : Colors.grey,
+                                            child: IconButton(
+                                              
+                                              onPressed: () {
+                                                var visible1 = ref.watch(
+                                                    passwordState1.notifier);
+                                                visible1.state = !visible1.state;
+                                                print(visible1.state);
+                                              },
+                                              icon: Icon(
+                                                visible1
+                                                    ? Icons.visibility
+                                                    : Icons.visibility_off,
+                                                color: visible1
+                                                    ? AppColors.darkBlue2
+                                                    : AppColors.darkBlue2,
+                                              ),
                                             ),
                                           ),
                                         ),
                                         controller: confirmPassword,
                                         obscureText: !visible1,
                                         validator: (value) {
-                                          if (value == null || value.isEmpty || password.text != confirmPassword.text) {
+                                          if (value == null ||
+                                              value.isEmpty ||
+                                              password.text !=
+                                                  confirmPassword.text) {
                                             return "please enter right Password";
                                           }
                                           return null;
                                         },
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top:
-                                            MediaQuery.of(context).size.height *
-                                                0.32,
-                                      ),
-                                      child: const Divider(
-                                        color: Colors.grey,
-                                        thickness: 1,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top:
-                                            MediaQuery.of(context).size.height *
-                                                0.32,
-                                      ),
-                                      child: Texts(
-                                        type: TextInputType.phone,
-                                        hintText: 'Phone Number',
-                                        icon: Icons.phone,
-                                        x: phoneNumber,
-                                        msg: 'Phone Number',
                                       ),
                                     ),
                                   ],
@@ -287,17 +273,22 @@ class RegisterPage extends ConsumerWidget {
                           ),
                           Positioned(
                             left: MediaQuery.of(context).size.width * 0.85,
-                            top: MediaQuery.of(context).size.height * 0.185,
+                            top: MediaQuery.of(context).size.height * 0.145,
                             child: Container(
                               decoration: const BoxDecoration(
-                                color: Colors.greenAccent,
+                                color: AppColors.darkBlue3,
                                 shape: BoxShape.circle,
                               ),
                               child: IconButton(
-                                onPressed: ()async {
+                                onPressed: () async {
                                   if (formKey.currentState!.validate()) {
-                                    if(await RegisterApi.registerAuth(userName.text, gmail.text, password.text, phoneNumber.text)){
-                                       Navigator.of(context).pushReplacementNamed('/home');
+                                    if (await RegisterApi.registerAuth(
+                                        userName.text,
+                                        gmail.text,
+                                        password.text,
+                                        phoneNumber.text)) {
+                                      Navigator.of(context)
+                                          .pushReplacementNamed('/home');
                                     }
                                   }
                                 },

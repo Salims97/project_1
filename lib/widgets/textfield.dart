@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/models/color.dart';
 
 class Texts extends StatelessWidget {
   final TextInputType type;
@@ -26,7 +27,7 @@ class Texts extends StatelessWidget {
         hintText: hintText,
         prefixIcon: Icon(
           icon,
-          color: const Color.fromARGB(255, 39, 31, 106),
+          color: AppColors.darkBlue2,
         ),
       ),
       controller: x,
