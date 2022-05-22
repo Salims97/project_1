@@ -10,7 +10,7 @@ import 'screen/login.dart';
 void main() {
   // WidgetsFlutterBinding.ensureInitialized(); //initialized google ads
   // MobileAds.instance.initialize();
-  
+
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -21,16 +21,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
       home: LoginPage(),
       routes: {
         '/login': (ctx) => LoginPage(),
-        '/register': (ctx)=> RegisterPage(),
-        '/home' : (context) => Home(),
-        '/bottom_bar' :(context) =>const BottomBar(),
-        '/details' :(context) => Details(),
+        '/register': (ctx) => RegisterPage(),
+        '/home': (context) => Home(),
+        '/bottom_bar': (context) => BottomBar(),
+        '/details': (context) => Details(),
         // '/future_provider': (ctx)=>const FutureProviderPage(),
         // '/stream_provider': (ctx)=>const StreamProviderPage(),
         // '/state_notifier': (ctx)=> const StateNotifierPage(),

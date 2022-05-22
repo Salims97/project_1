@@ -4,6 +4,8 @@ import 'package:project_1/screen/campaigns.dart';
 import 'package:project_1/screen/home.dart';
 import 'package:project_1/screen/profile.dart';
 
+import '../models/app_colors.dart';
+
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  Color theme = const Color.fromARGB(255, 11, 50, 82);
+  Color theme = AppColors.darkBackground;
   int _selectedIndex = 0;
   void _changeItem(int index) {
     setState(() {
@@ -52,15 +54,15 @@ class _BottomBarState extends State<BottomBar> {
         duration:const Duration(milliseconds: 900), // tab animation duration
         gap: 8, // the tab button gap between icon and text
         color: Colors.white, // unselected icon color
-        activeColor: Colors.lightGreen, // selected icon and text color
+        activeColor: Color.fromARGB(255, 124, 205, 127), // selected icon and text color
         // tabBackgroundColor:
         //     Colors.purple.withOpacity(0.1), // selected tab background color
 
         rippleColor:const  Color.fromARGB(
             255, 43, 43, 43), // tab button ripple color when pressed
         //hoverColor: Colors.blue, // tab button hover color
-        padding: const EdgeInsets.symmetric(
-            horizontal: 20, vertical: 5), // navigation bar padding
+        padding: EdgeInsets.symmetric(
+            horizontal: 20, vertical: 10), // navigation bar padding
 
         tabs:const [
           GButton(

@@ -16,9 +16,9 @@ class RowOfDetails extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Padding(
-                padding:  EdgeInsets.only(right: 4),
-                child: Icon(Icons.mark_email_read_outlined),
+              Padding(
+                padding: const EdgeInsets.only(right: 4),
+                child: Icon(Icons.category_outlined),
               ),
               Column(
                 children: [
@@ -45,7 +45,7 @@ class RowOfDetails extends StatelessWidget {
             children: [
               const Padding(
                 padding: EdgeInsets.only(right: 4),
-                child: Icon(Icons.mark_email_read_outlined),
+                child: Icon(Icons.calendar_month_outlined),
               ),
               Column(
                 children: [
@@ -72,12 +72,12 @@ class RowOfDetails extends StatelessWidget {
             children: [
               const Padding(
                 padding: EdgeInsets.only(right: 4),
-                child: Icon(Icons.mark_email_read_outlined),
+                child: Icon(Icons.volunteer_activism_outlined),
               ),
               Column(
                 children: [
-                  const Text(
-                    "Donation",
+                  Text(
+                    "Volunteer",
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(
@@ -93,4 +93,3 @@ class RowOfDetails extends StatelessWidget {
     );
   }
 }
-
