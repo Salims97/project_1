@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:project_1/controls/login-api.dart';
+import 'package:project_1/models/color.dart';
 import 'package:project_1/widgets/curved-left-shadow.dart';
 import 'package:project_1/widgets/curved-left.dart';
 import 'package:project_1/widgets/curved-right-shadow.dart';
@@ -20,6 +22,7 @@ class LoginPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     var visible = ref.watch(passwordState);
     return Scaffold(
+      backgroundColor: AppColors.darkBackground,
       appBar: null,
       body: SingleChildScrollView(
         child: Form(
@@ -43,7 +46,7 @@ class LoginPage extends ConsumerWidget {
                       child: Text(
                         'Login',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 39, 31, 106),
+                          color: AppColors.darkBlue9,
                           fontFamily: 'Adobe',
                           fontSize: 35,
                         ),
@@ -61,6 +64,7 @@ class LoginPage extends ConsumerWidget {
                             padding: EdgeInsets.only(
                                 right: MediaQuery.of(context).size.width * 0.1),
                             child: Card(
+                              color: AppColors.darkBlue9,
                               elevation: 16,
                               shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.only(
@@ -101,27 +105,27 @@ class LoginPage extends ConsumerWidget {
                                         hintText: 'Password',
                                         prefixIcon: const Icon(
                                           Icons.lock,
-                                          color:
-                                              Color.fromARGB(255, 39, 31, 106),
+                                          color: AppColors.darkBlue2,
                                         ),
-                                        suffixIcon: IconButton(
-                                            padding: const EdgeInsets.only(
-                                                right: 40),
-                                            onPressed: () {
-                                              var visible = ref.watch(
-                                                  passwordState.notifier);
-                                              visible.state = !visible.state;
-                                              print(visible.state);
-                                            },
-                                            icon: Icon(
-                                              visible
-                                                  ? Icons.visibility
-                                                  : Icons.visibility_off,
-                                              color: visible
-                                                  ? const Color.fromARGB(
-                                                      255, 39, 31, 106)
-                                                  : Colors.grey,
-                                            )),
+                                        suffixIcon: Padding(
+                                          padding:
+                                              const EdgeInsets.only(right: 40),
+                                          child: IconButton(
+                                              onPressed: () {
+                                                var visible = ref.watch(
+                                                    passwordState.notifier);
+                                                visible.state = !visible.state;
+                                                print(visible.state);
+                                              },
+                                              icon: Icon(
+                                                visible
+                                                    ? Icons.visibility
+                                                    : Icons.visibility_off,
+                                                color: visible
+                                                    ? AppColors.darkBlue2
+                                                    : AppColors.darkBlue2,
+                                              )),
+                                        ),
                                       ),
                                       controller: password,
                                       obscureText: !visible,
@@ -143,7 +147,7 @@ class LoginPage extends ConsumerWidget {
                           top: MediaQuery.of(context).size.height * 0.07,
                           child: Container(
                             decoration: const BoxDecoration(
-                              color: Colors.greenAccent,
+                              color: AppColors.darkBlue3,
                               shape: BoxShape.circle,
                             ),
                             child: IconButton(
@@ -173,9 +177,9 @@ class LoginPage extends ConsumerWidget {
                         onPressed: () {
                           print('blaaa');
                         },
-                        child: Text(
+                        child: const Text(
                           'Forgot ?',
-                          style: TextStyle(color: Colors.grey[400]),
+                          style: TextStyle(color: AppColors.darkBlue9),
                         ),
                       ),
                     ),
@@ -186,6 +190,7 @@ class LoginPage extends ConsumerWidget {
                       height: MediaQuery.of(context).size.height * 0.07,
                       width: MediaQuery.of(context).size.width * 0.3,
                       child: Card(
+                        color: AppColors.darkBlue9,
                         elevation: 16,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -200,7 +205,7 @@ class LoginPage extends ConsumerWidget {
                           child: const Text(
                             'Register',
                             style: TextStyle(
-                                fontSize: 18, color: Colors.deepOrange),
+                                fontSize: 18, color: AppColors.darkBlue3),
                           ),
                         ),
                       ),

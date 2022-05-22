@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/models/color.dart';
 
 class CurvedRight extends StatelessWidget {
   @override
@@ -16,8 +17,8 @@ class CurvedRight extends StatelessWidget {
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
               colors: [
-                Color.fromRGBO(86, 201, 251, 1.0),
-                Color.fromRGBO(76, 170, 251, 1.0)
+                 Color.fromRGBO(62, 92, 118, 1),
+                Color.fromRGBO(116, 140, 171, 1),
               ],
             ),
           ),

@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/models/color.dart';
 
 class CurvedRightShadow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    
+
     return Container(
       child: ClipPath(
         clipper: RightShadowClipper(),
         child: Container(
           height: 270.0,
           width: size.width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
               colors: [
-                Color.fromRGBO(86, 201, 251, 0.3),
-                Color.fromRGBO(76, 170, 251, 0.3)
+                  Color.fromRGBO(235, 248, 255, 0.4),
+                Color.fromRGBO(27, 145, 255, 0.2),
               ],
             ),
           ),

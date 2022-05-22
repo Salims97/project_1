@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/models/color.dart';
 
 class CurvedLeft extends StatelessWidget {
   @override
@@ -10,13 +11,13 @@ class CurvedLeft extends StatelessWidget {
         child: Container(
           height: 300.0,
           width: size.width,
-          decoration:const BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color.fromRGBO(243, 169, 95, 1.0),
-                Color.fromRGBO(235, 101, 91, 1.0)
+              Color.fromRGBO(116, 140, 171, 1),
+                Color.fromRGBO(62, 92, 118, 1),
               ],
             ),
           ),
